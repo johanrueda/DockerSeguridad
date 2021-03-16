@@ -53,7 +53,7 @@ ahora creamos nuestro certificado
 
 y ahora creamos nuestro MyTrueStore
 
-![](imagenes/store.PNG)
+![](imagenes/store.png)
 
 ahora subimos nuestra imagen a docker 
 
@@ -73,7 +73,7 @@ accedemos a nuestra pagina inicial
 
 Ahora subimos nuestra imagen docker al repositorio de docker hub
 
-![](subirDocker/llave.PNG)
+![](subirDocker/llave.png)
 
 creamos nuestra instancia de AWS EC2, instalamos docker y corremos la imagen que subimos a nuestro repositorio
 
@@ -82,6 +82,8 @@ creamos nuestra instancia de AWS EC2, instalamos docker y corremos la imagen que
 y por ultimo ingresamos al navegador para verificar que nuestro servicio este funcionando en la instancia
 
 ![](imagenes/paginaAWS.PNG)
+
+El video se muestra su funcionamiento totalmente
 
 
 ## Autor
