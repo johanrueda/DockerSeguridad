@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"edu.escuelaing.arem.app","l":"AppTest"},{"p":"edu.escuelaing.arem.app.login","l":"Login"},{"p":"edu.escuelaing.arem.app","l":"SecureApp"},{"p":"edu.escuelaing.arem.app.HttpServer","l":"URLReader"}];updateSearchResults();

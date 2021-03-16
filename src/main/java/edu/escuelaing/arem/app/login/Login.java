@@ -12,7 +12,7 @@ import java.security.NoSuchAlgorithmException;
  * Clase que maneja el control de acceso al servicio web
  *
  */
-public class Login {
+public class Login extends URLReader {
 
     /**
      * Metodo de acceso al servicio web

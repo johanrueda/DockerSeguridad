@@ -1,17 +1,16 @@
-# Taller de de modularización con virtualización e Introducción a Docker y a AWS
-Este programa tiene como proposito la enseñanza de la utilizacion de dockers con una infraestructura de balanceador de carga
+# Taller de Aplicacion segura
+Este programa tiene como proposito el acceso seguro de un servicio web desde un navegador, manejando llaves y certificados donde se garantiza la autenticidad, integridad y cofidencialidad.
 
 ## Prerequisitos del sistema
 * Maven
 * Git
 * Java
 * Docker
-* Mongo
 
 ## Descarga,instalacion y ejecución
 Primero debemos clonar el repositorio, como veremos en el siguiente comando:
 
-**git clone https://github.com/johanrueda/Arep_Docker**
+**git clone https://github.com/johanrueda/DockerSeguridad**
 
 Ahora ejecutamos una consola de comandos en el directorio donde fue clonado el repositorio y compilar el proyecto con el siguiente comando:
 
@@ -23,7 +22,7 @@ Ahora ejecutamos una consola de comandos en el directorio donde fue clonado el r
 
 ## Como funciona
 
-La aplicacion que utiliza una base de datos mongo, donde se le inserta una palabra y ella la guardara con su fecha de ingreso, donde tambien tenemos la opcion de imprimir todas las palabras insertadas
+La aplicacion utiliza certificado y un par de llaves para el acceso seguro desde el navegador, pero ademas se utiliza encriptacion de la contraseña del usuario.
 
 ## Documentación
 
@@ -37,57 +36,52 @@ Este proyecto se desarrollo con:
 * Maven
 * Java 8
 * Intellij IDEA
-* Mongo
 * Docker
 
-Primero creamos el docker compose para hacer la configuracion automatica de nuestro docker
+Se manejo la siguiente Arquitectura, se utiliza un login que tiene acceso encriptado de la contraseña, donde obtiene el acceso al servicio web desplegado.
 
-![](imagenes/1.PNG)
-
-luego creamos y ejecutamos las imagenes de docker para el balanceador de carga y el servicio en sus respectivos puertos
-
-![](imagenes/2.PNG)
+![](imagenes/arq.PNG)
 
 
-![](imagenes/3.PNG)
+Al crear nuestro servicio web, creamos nuestras llaves y certificado para hacer nuestro servicio web seguro HTTPS
 
-![](imagenes/4.PNG)
+![](imagenes/llave.png)
 
-Asi es como queda nuestro docker
+ahora creamos nuestro certificado
 
-![](imagenes/5.PNG)
+![](imagenes/certificado.png)
 
-Luego vamos a ejecutarlo localemnte para verificar su funcionamiento
+y ahora creamos nuestro MyTrueStore
 
-![](imagenes/6.PNG)
+![](imagenes/store.PNG)
 
-Ahora vamos a crear un repositorio en docker hub y subir nuestras imagenes
+ahora subimos nuestra imagen a docker 
 
-![](imagenes/7.PNG)
+![](imagenes/docker1.PNG)
 
-Para poder crear nuestra instancia de EC2 de AWS vamos a aws Educate y la lanzamos, para conectarnos utilizamos el siguiente comando
+y corremos la imagen en el puerto 4000
 
-![](imagenes/8.PNG)
+![](imagenes/docker2.PNG)
 
-Configuramos los respectivos puertos en el grupo de seguirdad de nuestra instancia
+ahora consultamos en nuestro navegador, preferiblemente FIREFOX y vemos que nuestros certificados y llaves ya estan funcionando
 
-![](imagenes/9.PNG)
+![](imagenes/pagina1.PNG)
 
-instalamos docker en nuestra instancia
+accedemos a nuestra pagina inicial
 
-![](imagenes/10.PNG)
+![](imagenes/pagina2.PNG)
 
-le cambiamos el usuario a la instancia
+Ahora subimos nuestra imagen docker al repositorio de docker hub
 
-![](imagenes/11.PNG)
+![](subirDocker/llave.PNG)
 
-ahora lanzamos la imagen de nuestro docker a la instancia EC2
+creamos nuestra instancia de AWS EC2, instalamos docker y corremos la imagen que subimos a nuestro repositorio
 
-![](imagenes/12.PNG)
+![](imagenes/correrAWS.PNG)
 
-y ahora verificamos su funcionamiento
+y por ultimo ingresamos al navegador para verificar que nuestro servicio este funcionando en la instancia
 
-![](imagenes/13.PNG)
+![](imagenes/paginaAWS.PNG)
 
 
 ## Autor
