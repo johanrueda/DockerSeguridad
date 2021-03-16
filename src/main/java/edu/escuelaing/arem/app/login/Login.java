@@ -9,13 +9,13 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * Class that control the login of the web server
+ * Clase que maneja el control de acceso al servicio web
  *
  */
 public class Login {
 
     /**
-     * Method that does the review type data
+     * Metodo de acceso al servicio web
      * @param request
      * @param response
      * @return
@@ -43,7 +43,7 @@ public class Login {
     }
 
     /**
-     * Method that helps if user is loggged
+     * Metodo que da acceso al servicio web
      * @param request
      * @param response
      * @return

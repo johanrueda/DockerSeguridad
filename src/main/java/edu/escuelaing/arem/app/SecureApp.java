@@ -4,7 +4,7 @@ import edu.escuelaing.arem.app.login.Login;
 import static spark.Spark.*;
 
 /**
- * Class that makes a connection of web site
+ * Clase que crea la conexion al servicio web
  *
  */
 public class SecureApp {
@@ -20,6 +20,6 @@ public class SecureApp {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
         }
-        return 5000; //returns default port if heroku-port isn't set (i.e. on localhost)
+        return 5000;
     }
 }
