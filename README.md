@@ -73,7 +73,7 @@ accedemos a nuestra pagina inicial
 
 Ahora subimos nuestra imagen docker al repositorio de docker hub
 
-![](subirDocker/llave.png)
+![](imagenes/subirDocker.PNG)
 
 creamos nuestra instancia de AWS EC2, instalamos docker y corremos la imagen que subimos a nuestro repositorio
 
